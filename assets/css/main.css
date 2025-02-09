@@ -1,0 +1,52 @@
+@import url("normalize.css");
+@import url("utilities.css");
+@import url("button.css");
+
+:root {
+  --color-bg: rgb(219, 222, 219);
+  --color: rgb(207, 207, 207);
+}
+
+@font-face {
+  font-family: "Conthrax";
+  src: url("/assets/fonts/Conthrax-Semibold.otf");
+}
+
+body {
+  font-family: "Inter", serif;
+  /* background-color: var(--color-bg) */
+  line-height: 1.4;
+  color: var(--color);
+
+  /* background-image: radial-gradient(#4f506e 0.25px, transparent 0.5px),
+    radial-gradient(#4b4d85 0.25px, #e5e5f7 0.25px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px; */
+
+  background-color: #171717;
+    opacity: 1;
+    background-image: radial-gradient(#656464 0.5px, #171717 0.5px);
+    background-size: 10px 10px;
+}
+
+.conthrax {
+  font-family: "Conthrax";
+}
+
+.logo {
+  color: rgb(215, 38, 56);
+}
+
+.front-page {
+  padding-inline: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-body {
+  display: inline-block;
+  text-align: left;
+  width: 46ch;
+}
