@@ -37,3 +37,10 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+.unstyled-button {
+  background: inherit;
+  border: inherit;
+  color: inherit;
+  cursor: pointer;
+}

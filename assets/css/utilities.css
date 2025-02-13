@@ -10,6 +10,18 @@
   margin-bottom: 1em;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
 .gap-1 {
   gap: 1em;
 }

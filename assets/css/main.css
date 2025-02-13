@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .dots {
@@ -77,4 +78,30 @@ body {
   .container {
     padding-inline: 2.5em;
   }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce-animation {
+  animation: 2s infinite ease bounce;
+}
+
+.learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-top: -8em;
 }
