@@ -4,6 +4,7 @@
 
 :root {
   --color-bg: #171717;
+  --color-text-faded: #676262;
   --color: rgb(255, 255, 255);
 }
 
@@ -12,12 +13,32 @@
   src: url("/assets/fonts/Conthrax-Semibold.woff2");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", serif;
   /* background-color: var(--color-bg) */
   line-height: 1.4;
   color: var(--color);
   background-color: var(--color-bg);
+}
+
+.container {
+  padding-block: 1em;
+  padding-inline: 10em;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  max-width: 60ch;
 }
 
 .conthrax {
@@ -66,8 +87,14 @@ body {
 .text-body {
   padding-inline: 0.5em;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   max-width: 46ch;
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -75,8 +102,33 @@ body {
     font-size: 1.5em;
   }
 
-  .container {
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+  }
+
+  h5 {
+    font-size: 1.05em;
+  }
+
+  .full-page-container {
     padding-inline: 2.5em;
+  }
+
+  .grid-image {
+    height: 100px;
+    width: auto;
+  }
+
+  .container {
+    padding-inline: 2em;
   }
 }
 
@@ -86,7 +138,7 @@ body {
   }
 
   50% {
-    transform: translateY(-25px);
+    transform: translateY(-10px);
   }
 
   100% {
@@ -104,4 +156,40 @@ body {
   align-items: center;
   gap: 1em;
   margin-top: -8em;
+}
+
+.faded-text {
+  color: var(--color-text-faded);
+}
+
+.grid-image {
+  height: 150px;
+  width: auto;
+  border: solid 3px transparent;
+}
+
+.grid-image:hover {
+  border: 3px #ffffff8f solid;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  max-height: 300px;
+  max-width: 650px;
+  box-sizing: border-box;
+}
+
+.block {
+  margin-block: 1em;
+}
+
+.big-block {
+  height: 10em;
+  background-color: #1f1f1f;
+}
+
+.image-link {
+  line-height: 0;
 }
