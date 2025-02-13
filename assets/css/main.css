@@ -3,13 +3,13 @@
 @import url("button.css");
 
 :root {
-  --color-bg: rgb(219, 222, 219);
-  --color: rgb(207, 207, 207);
+  --color-bg: #171717;
+  --color: rgb(255, 255, 255);
 }
 
 @font-face {
   font-family: "Conthrax";
-  src: url("/assets/fonts/Conthrax-Semibold.otf");
+  src: url("/assets/fonts/Conthrax-Semibold.woff2");
 }
 
 body {
@@ -17,16 +17,7 @@ body {
   /* background-color: var(--color-bg) */
   line-height: 1.4;
   color: var(--color);
-
-  /* background-image: radial-gradient(#4f506e 0.25px, transparent 0.5px),
-    radial-gradient(#4b4d85 0.25px, #e5e5f7 0.25px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px; */
-
-  background-color: #171717;
-    opacity: 1;
-    background-image: radial-gradient(#656464 0.5px, #171717 0.5px);
-    background-size: 10px 10px;
+  background-color: var(--color-bg);
 }
 
 .conthrax {
@@ -45,8 +36,45 @@ body {
   align-items: center;
 }
 
+.dots {
+  background-image: radial-gradient(#5d5d5d 0.5px, transparent 0.5px),
+    radial-gradient(#656565 0.5px, #171717 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  animation: scrolling-dots linear 30s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+@keyframes scrolling-dots {
+  from {
+    opacity: 0.85;
+    background-size: 20px 20px;
+  }
+  to {
+    opacity: 0.3;
+    background-size: 23px 23px;
+  }
+}
+
 .text-body {
+  padding-inline: 0.5em;
   display: inline-block;
   text-align: left;
-  width: 46ch;
+  max-width: 46ch;
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    padding-inline: 2.5em;
+  }
 }
